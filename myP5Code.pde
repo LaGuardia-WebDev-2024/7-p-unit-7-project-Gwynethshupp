@@ -6,24 +6,29 @@ void setup() {
 //🎯Variable Declarations Go Here
 Var eyeSize= 202;
 Var CherrySize= 229;
-var MouthSize= 1;
+var TopbeakSize= 210;
 var eyebrowSize=178;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
+  
   //duck
   fill(255, 248, 43); 
 ellipse(200,200,100,100);
 ellipse(150,290,200,100);
-fill(255, 136, 0);
-triangle ( 250,210,247,190,300,200);
 fill(255, 255, 255);
 ellipse ( 200,200,20,20);
 fill(5, 0, 0);
 ellipse(205,eyeSize, 10,10);
-ellipse (231,223,10,MouthSize);
+
+//beak
+fill(255, 136, 0);
+triangle ( 250,210,247,190,300,200);
+triangle ( 250,210,247,190,300,160);
+
+
 line(188,178, 213,eyebrowSize)
 //cupcake
 fill(255, 246, 230);
@@ -33,16 +38,16 @@ quad(344,296,365,330,400,330,420,296);
 fill(235, 64, 52); // Cherry
 ellipse(377,CherrySize,20,20);
 
-eyeSize= eyeSize - 1;
+eyeSize= eyeSize - .2;
 if(eyeSize<195){eyeSize=195}
 
 CherrySize=CherrySize-2 
 
- MouthSize= MouthSize -1 
- if(MouthSize>10){MouthSize=10}
+ 
 
 
-eyebrowSize=eyebrowSize + 1;
+eyebrowSize=eyebrowSize + .2;
+if (eyebrowSize > 190){eyebrowSize=190}
 
 
 
